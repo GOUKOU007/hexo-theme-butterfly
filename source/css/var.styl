@@ -18,6 +18,7 @@ $dafault-code-font = consolas, Menlo, 'PingFang SC', 'Microsoft YaHei', sans-ser
 $font-family = hexo-config('font.font-family') ? unquote(hexo-config('font.font-family')):$dafault-font-family
 $code-font-family = hexo-config('font.code-font-family') ? unquote(hexo-config('font.code-font-family')):$dafault-code-font
 $site-name-font = hexo-config('blog_title_font.font-family') && unquote(hexo-config('blog_title_font.font-family'))
+$title-shadow = hexo-config('font.title-shadow')? unquote(hexo-config('font.title-shadow')):2px 2px 4px rgba(0, 0, 0, .15)
 // hr
 $hrEnable = hexo-config('hr_icon') && hexo-config('hr_icon.enable')
 $hr-icon = $hrEnable && hexo-config('hr_icon.icon') ? hexo-config('hr_icon.icon'):'\f0c4'
@@ -63,6 +64,9 @@ $body-bg = #fff
 $a-link-color = #99a9bf
 $sticky-color = $light-orange
 $theme-meta-color = $themeColorEnable && hexo-config('theme_color.meta_color') ? convert(hexo-config('theme_color.meta_color')):#858585
+$light_banner_mask = $themeColorEnable && hexo-config('theme_color.light_banner_mask') ? convert(hexo-config('theme_color.light_banner_mask')):rgba(0, 0, 0, .3)
+$dark_banner_mask = $themeColorEnable && hexo-config('theme_color.dark_banner_mask') ? convert(hexo-config('theme_color.dark_banner_mask')):rgba(0, 0, 0, .7)
+$dark_bg_mask = $themeColorEnable && hexo-config('theme_color.dark_bg_mask') ? convert(hexo-config('theme_color.dark_bg_mask')):#0d0d0d
 // nav
 $nav-background = $themeColorEnable && hexo-config('theme_color.nav_background') ? convert(hexo-config('theme_color.nav_background')):rgba(0, 0, 0, 0)
 $nav-font-color = $themeColorEnable && hexo-config('theme_color.nav_font_color') ? convert(hexo-config('theme_color.nav_font_color')):$font-color
