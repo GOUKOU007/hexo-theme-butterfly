@@ -117,8 +117,9 @@ if hexo-config('enter_transitions')
   #site-subtitle
     animation: titleScale 1s
 
-  #nav.show
-    animation: headerNoOpacity 1s
+  if $nav_opacity
+    #nav.show
+      animation: headerNoOpacity 1s
 
   canvas:not(#ribbon-canvas),
   #web_bg
