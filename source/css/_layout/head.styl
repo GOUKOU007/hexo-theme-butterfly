@@ -258,7 +258,7 @@
     opacity: 1
 
   #blog_name
-    flex: 1
+    flex: 0 1
 
   #toggle-menu
     display: none
@@ -279,13 +279,16 @@
     font-weight: bold
     cursor: pointer
 
+  #menus
+    width: 100%;
+
   .menus_items
     display: inline
 
     .menus_item
       position: relative
       display: inline-block
-      padding: 0 0 0 14px
+      padding: 0 14px 0 14px
 
       &:hover
         .menus_item_child
@@ -354,7 +357,8 @@
 
   #search-button
     display: inline
-    padding: 0 0 0 14px
+    padding: 0 14px 0 14px
+    float: right
 
   .site-page
     position: relative
