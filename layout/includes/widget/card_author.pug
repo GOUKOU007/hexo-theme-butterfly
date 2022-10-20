@@ -1,18 +1,8 @@
-- const now = new Date()
-- const hour = now.getHours()
-- const isDay = hour >= 6 && hour <= 17
-- const isNight = hour <= 24 && hour >= 17
 if theme.aside.card_author.enable
   .card-widget.card-info
     .is-center
       .avatar-img
-
-        if isDay
-          img(src=url_for(theme.avatar.day_img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
-        else if isNight
-          img(src=url_for(theme.avatar.night_img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
-        else
-          img(src=url_for(theme.avatar.late_img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
+        img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
       .author-info__name= config.author
       .author-info__description!= theme.aside.card_author.description || config.description
 

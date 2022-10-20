@@ -78,7 +78,21 @@ script.
     typeof Prism === 'object' && Prism.highlightAll()
 
     typeof preloader === 'object' && preloader.endLoading()
+
+    auto_avatar()
   })
+
+  function auto_avatar() {
+    const now = new Date()
+    const hour = now.getHours()
+    const isDay = hour >= 6 && hour <= 17
+    const isNight = hour <= 24 && hour >= 17
+    avatar = document.querySelectorAll("div.avatar-img > img")
+    for (i = 0; i < avatar.length; i++) {
+      avatar[i].setAttribute("src", isDay?"/images/light-panda.webp":isNight?"/images/dark-panda.webp":"/images/late-panda.webp")
+      avatar[i].setAttribute("data-lazy-src", isDay?"/images/light-panda.webp":isNight?"/images/dark-panda.webp":"/images/late-panda.webp")
+    }
+  }
 
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
