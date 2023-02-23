@@ -284,6 +284,7 @@
   &.show
     opacity: 1
 
+  //可能存在冲突
   #blog-info
     flex: 1
     color: var(--light-grey)
@@ -293,6 +294,10 @@
       margin-right: 6px
       height: 36px
       vertical-align: middle
+  //如果有问题就删了
+  #blog_name
+    flex: 0 1
+
 
   #toggle-menu
     display: none
@@ -312,13 +317,16 @@
     text-shadow: 2px 2px 4px rgba($dark-black, .15)
     font-weight: bold
 
+  #menus
+    width: 100%;
+
   .menus_items
     display: inline
 
     .menus_item
       position: relative
       display: inline-block
-      padding: 0 0 0 14px
+      padding: 0 14px 0 14px
 
       &:hover
         .menus_item_child
@@ -387,7 +395,8 @@
 
   #search-button
     display: inline
-    padding: 0 0 0 14px
+    padding: 0 14px 0 14px
+    float: right
 
   .site-page
     position: relative
